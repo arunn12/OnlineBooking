@@ -1,0 +1,50 @@
+<h1>Booking Form</h1>
+<mat-card class="book" style="margin-top:5%;margin-bottom:55%;margin-left:5%;margin-right:60%;">
+  <mat-form-field>
+    <input [(ngModel)]="this.booking.name" matInput placeholder="Enter Your name">
+  </mat-form-field><br>
+      
+  
+  <mat-form-field>
+    <input [(ngModel)]="this.booking.mail" matInput placeholder="Enter your Email">
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <input [(ngModel)]="this.booking.mobile" matInput placeholder="Enter your MobileNo">
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <input [(ngModel)]="this.booking.city" matInput placeholder="City">
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <input [(ngModel)]="this.booking.post" matInput placeholder="Post">
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <input [(ngModel)]="this.booking.country" matInput placeholder="Country">
+  </mat-form-field><br>
+
+
+  <mat-form-field>
+  <input [(ngModel)] = "this.booking.date" matInput [matDatepicker]="picker" placeholder="Choose the date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field><br>
+
+
+  <mat-form-field> 
+    <select matNativeControl required [(ngModel)]="this.booking.bookingtime" placeholder="choose the time">
+    <option value="9am-10am">9am-10am</option>
+    <option value="10am-11am">10am-11am</option>
+    <option value="11am-12pm">11am-12pm</option>
+    </select> 
+  </mat-form-field><br>
+  
+
+  
+  <button mat-raised-button color='accent' (click)="goBook()">RegisterNow</button>
+  <app-alerts></app-alerts>
+  
+</mat-card>
+
